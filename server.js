@@ -8,6 +8,7 @@ const bodyParser = require('body-parser')
 
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
+const bookRouter = require('./routes/books')
 
 //view engine
 app.set('view engine', 'ejs')
@@ -37,5 +38,6 @@ conn()
 
 app.use('/', indexRouter)
 app.use('/authors', authorRouter)
+app.use('/books', bookRouter)
 
 // app.listen(process.env.PORT || 3000, console.log('server is listening on port 3000'))
